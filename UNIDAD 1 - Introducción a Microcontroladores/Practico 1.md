@@ -17,7 +17,9 @@ Aprender a utilizar bloques de programación en Tinkercad para controlar un LED 
 4. Agregar bloques de comentarios explicando qué hace cada parte del programa.
 5. Subir capturas de pantalla del circuito y del código en bloques.
 
-### RESOLUCIÓN GRAL.
+### RESOLUCIÓN GRAL. 
+
+[LINK DE TINKERCAD](https://www.tinkercad.com/things/8X24wneMqej/editel?returnTo=%2Fdashboard%2Fcollections%2F9Th4JMdooGd%2Fcircuits&sharecode=d8kGZTU8o40Y6dbUNeeADrIEyD66GP8S9azbfpjyMMU)
  
 ![parpadeo_led](/img/parapdeo.png)
 ![codigo](/img/codigoParpadeo.png)
