@@ -17,10 +17,15 @@ Aprender a utilizar bloques de programación en Tinkercad para controlar un LED 
 4. Agregar bloques de comentarios explicando qué hace cada parte del programa.
 5. Subir capturas de pantalla del circuito y del código en bloques.
 
-### RESOLUCIÓN
-
-1. 
+### RESOLUCIÓN GRAL.
+ 
 ![parpadeo_led](/img/parapdeo.png)
+![codigo](/img/codigoParpadeo.png)
+
+### CASO ALTERNADOS
+
+![alternados](/img/alternados.png)
+
 
 ---
 
@@ -28,7 +33,7 @@ Aprender a utilizar bloques de programación en Tinkercad para controlar un LED 
 
 > Solo si el/la docente o el/la estudiante desea profundizar en el código tradicional de Arduino.
 
-### 🧪 Parpadeo clásico de 1 segundo
+### 🧪 Parpadeo clásico de 1 segundo (RECORDAR USAR "ARDUINO IDE")
 
 ```c
 void setup() {
