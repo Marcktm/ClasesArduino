@@ -30,9 +30,81 @@ void loop() {
 
 ### 🔹 Sintaxis básica del lenguaje C
 
-- **Variables**: declaración y uso de datos (`int`, `float`, `bool`, etc.)
-- **Estructuras de control**: `if`, `else`, `for`, `while`
-- **Funciones**: bloques de código reutilizables (`setup()`, `loop()`, funciones propias)
+---
+
+#### ✅ Variables
+
+```c
+int led = 13;         // Número de pin digital
+float temperatura = 23.5; // Valor decimal
+bool encendido = true;    // Variable booleana
+```
+
+---
+
+#### ✅ Estructuras de control
+
+##### 🔸 if / else
+
+```c
+int sensor = analogRead(A0);
+if (sensor > 500) {
+  digitalWrite(13, HIGH);
+} else {
+  digitalWrite(13, LOW);
+}
+```
+
+Lee un valor analógico del pin A0.
+Si el valor es mayor a 500, enciende el LED del pin 13.
+Si es menor o igual, lo apaga.
+
+#### 🔸 for
+
+```c
+for (int i = 0; i < 5; i++) {
+  digitalWrite(13, HIGH);
+  delay(200);
+  digitalWrite(13, LOW);
+  delay(200);
+}
+```
+
+El LED en el pin 13 parpadea 5 veces, encendiéndose por 200 ms y apagándose por 200 ms en cada ciclo.
+
+#### 🔸 while
+
+```c
+int contador = 0;
+while (contador < 3) {
+  digitalWrite(13, HIGH);
+  delay(500);
+  digitalWrite(13, LOW);
+  delay(500);
+  contador++;
+}
+```
+Este código hace que el LED en el pin 13 parpadee 3 veces, encendiéndose por 500 ms y apagándose por otros 500 ms en cada ciclo.
+
+---
+
+#### ✅ Funciones
+
+```c
+void encenderLed() {
+  digitalWrite(13, HIGH);
+  delay(500);
+  digitalWrite(13, LOW);
+  delay(500);
+}
+
+void loop() {
+  encenderLed();  // Llamada a la función
+}
+```
+
+El programa separa la lógica del parpadeo del LED en una función llamada encenderLed(), y luego la ejecuta continuamente desde el loop().
+Esto hace el código más limpio y modular.
 
 ---
 
@@ -138,9 +210,18 @@ void loop()
 6. Fuente recomendada para el motor: **3V a 6V** (usar fuente externa si el motor requiere más corriente que la que entrega el pin de Arduino).
 7. Documentar con **capturas de pantalla del circuito**, **bloques utilizados** y la **simulación en funcionamiento**.
 8. Agregar una breve **reflexión final**: ¿Cómo interactúan Arduino, el transistor y el motor? ¿Qué cuidados eléctricos tuviste en cuenta?
+
 ---
 
-## ✍️ Resolución y reflexión
+### 🧠 Aclaraciones eléctricas
+
+- **Arduino no puede alimentar directamente motores** que consumen más de 30-50 mA.
+- Usamos un transistor como **interruptor electrónico**, que permite al Arduino controlar la corriente sin dañarse.
+- El **diodo flyback** evita daños por picos de voltaje generados por el motor al apagarse.
+
+---
+
+## Resolución y reflexión
 
 **Escribí tu reflexión acá:**
 
